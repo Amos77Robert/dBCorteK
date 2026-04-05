@@ -213,7 +213,7 @@ dBCorteK is designed for anyone who needs to design database schemas with data q
 
 - **Free** - No licensing fees or subscription costs
 - **Offline** - Works entirely on your Windows desktop
-- **Complete Workflow** - Load, analyze, generate, execute
+- **Complete Workflow** - Load, analyze, generate, execute, preview
 - **Transparent** - See why each type was suggested
 - **Lightweight** - Runs on CPU, no GPU needed
 - **No Database Required** - Built-in SQLite for testing
