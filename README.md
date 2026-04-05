@@ -178,10 +178,11 @@ Pre-compiled Installer (Recommended for End Users)
 - Browse table structure and sample data
 
 ### SQL Query Editor
-──────────────────────────────────────────────────
+``` ──────────────────────────────────────────────────
 • Custom Built SQL Editor to preview suggested table structures 
 • Check validity of the query
 • Execute queries from real database engine
+```
 ---
 
 ## Confidence Level Determination
