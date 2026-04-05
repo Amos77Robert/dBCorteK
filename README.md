@@ -122,9 +122,9 @@ Pre-compiled Installer (Recommended for End Users)
 | Component | Minimum | Recommended |
 |-----------|---------|-------------|
 | OS | Windows 10/11 (64-bit) | |
-| RAM | 4GB | 8GB+ |
-| CPU | Dual-core | Quad-core |
-| Storage | 200MB | 500MB+ |
+| RAM | 2GB |      |
+| CPU | Dual-core |        |
+| Storage | 200MB+ |        |
 
 ---
 
@@ -177,6 +177,11 @@ Pre-compiled Installer (Recommended for End Users)
 - Select your table from the dropdown
 - Browse table structure and sample data
 
+SQL Query Editor
+──────────────────────────────────────────────────
+• Custom Built SQL Editor to preview suggested table structures 
+• Check validity of the query
+• Execute queries from real database engine
 ---
 
 ## Confidence Level Determination
