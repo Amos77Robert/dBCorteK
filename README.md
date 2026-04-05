@@ -18,9 +18,7 @@
 
 ## Overview
 
-**dBCorteK (Database Cortex)** is a free Windows desktop application that brings Data Science principles into database schema design. We are in the world where IT specialists maight not usually have Data Science background when designing databases, at the same time where Data Scientists given tasks to build new databases are not all coming from IT background. This is a silent problem that leads to heavy and unnecessary downstream works to be done by Data Scientists before they can start analysing data. Not  only that, it can also become costly when experts may need to be hired to review database schemas as a way of improving systems. To reduce this gap between these two specialists (IT - DS), a tool that at a basic level can help to recommend proper schema data types using actual data samples and statistical computations together with predefined rules based on Data Management practices is highly needed now. Many database tools and research is focusing on optimising query performance and humanising queries leaving this silent challenge underserved. Quality data storage is not only the issue of validation at front-end levels because front-end developers build systems based on back-end requirements. Unlike traditional approaches where database designers define tables and data types without understanding the actual data that will be stored, dBCorteK analyzes sample data (origina or synthetic) first - then suggests optimal data types based on statistical analysis of your actual data patterns.
-
-I developed this tool after observing that many downstream data quality issues, ETL failures, and analytics problems originate not from model limitations, but from inconsistencies in database schema design - particularly improper data type definitions. Database designers often lack Data Science perspective, leading to inconsistent schemas. dBCorteK bridges this gap by putting Data Science in the loop of database design.
+Database designers often lack Data Science perspective, leading to improper data type definitions that cause poor data quality, unreliable analytics and downstream ETL failures due to data types inconsistencies. **dBCorteK** is a free feature-rich windows desktop application that bridges this gap by using sample data that represents what will be stored in the database and statistically recommending optimal schema data types before table creation. From a Data Science perspective, the tool reduces the disproportionate time spent fixing structural flaws instead of actual analysis. I built and shared dBCorteK publicly because this silent problem wastes industry resources daily, yet existing tools focus on query performance more than quality data storage at the design stage. This tool can be useful to IT specialists with or no Data Science background and vice-versa to cushion domain knowledge gaps.
 
 ### The Problem dBCorteK Solves
 
@@ -40,6 +38,7 @@ I developed this tool after observing that many downstream data quality issues, 
 - Generate CREATE TABLE DDL ready for execution
 - Preview table structure before creation
 - Allows exporting DDL for use in production or other SQL workbenches.
+- Has Custom SQL Editor to use for previewing recommended table structure using queries.
 
 **The result:** Better data quality from day one. Reduced ETL failures. Reliable analytics. A data-science-informed schema design process.
 
