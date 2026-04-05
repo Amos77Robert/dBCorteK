@@ -1,4 +1,4 @@
-# dBCorteK - a Database Schema Data Type Helper Tool
+# dBCorteK - a Database Schema Data Type Helper Tool 
 
 <div align="center">
 
