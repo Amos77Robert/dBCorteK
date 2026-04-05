@@ -177,7 +177,7 @@ Pre-compiled Installer (Recommended for End Users)
 - Select your table from the dropdown
 - Browse table structure and sample data
 
-SQL Query Editor
+### SQL Query Editor
 ──────────────────────────────────────────────────
 • Custom Built SQL Editor to preview suggested table structures 
 • Check validity of the query
