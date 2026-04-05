@@ -1,2 +1,319 @@
-# dBCorteK
-dBCorteK (Database Cortex) is an intelligent database schema design helper tool that uses statistical analysis to suggest optimal data types for database tables based on the sample data expected to be stored in a particular database..
+# dBCorteK - a Database Schema Data Type Helper Tool
+
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-6.0-blue)
+![Python](https://img.shields.io/badge/python-3.8+-green)
+![SQLite](https://img.shields.io/badge/SQLite-3.x-red)
+![License](https://img.shields.io/badge/license-MIT-yellow)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-lightgrey)
+
+**Intelligent Database Schema Design Helper Tool for Quality Data Storage**
+
+[Features](#features) • [Installation](#installation) • [Quick Start](#quick-start) • [Use Cases](#use-cases) • [Technical Specifications](#technical-specifications) • [Reporting Issues](#reporting-issues)
+
+</div>
+
+---
+
+## Overview
+
+**dBCorteK (Database Cortex)** is a free Windows desktop application that brings Data Science principles into database schema design. We are in the world where IT specialists maight not usually have Data Science background when designing databases, at the same time where Data Scientists given tasks to build new databases are not all coming from IT background. This is a silent problem that leads to heavy and unnecessary downstream works to be done by Data Scientists before they can start analysing data. Not  only that, it can also become costly when experts may need to be hired to review database schemas as a way of improving systems. To reduce this gap between these two specialists (IT - DS), a tool that at a basic level can help to recommend proper schema data types using actual data samples and statistical computations together with predefined rules based on Data Management practices is highly needed now. Many database tools and research is focusing on optimising query performance and humanising queries leaving this silent challenge underserved. Quality data storage is not only the issue of validation at front-end levels because front-end developers build systems based on back-end requirements. Unlike traditional approaches where database designers define tables and data types without understanding the actual data that will be stored, dBCorteK analyzes sample data (origina or synthetic) first - then suggests optimal data types based on statistical analysis of your actual data patterns.
+
+I developed this tool after observing that many downstream data quality issues, ETL failures, and analytics problems originate not from model limitations, but from inconsistencies in database schema design - particularly improper data type definitions. Database designers often lack Data Science perspective, leading to inconsistent schemas. dBCorteK bridges this gap by putting Data Science in the loop of database design.
+
+### The Problem dBCorteK Solves
+
+**Traditional database design workflows are broken:**
+
+- Designers guess data types without seeing actual data
+- No statistical analysis of what values will be stored
+- Data quality issues in analysis stages discovered only after data was already stored.
+- ETL pipelines break due to unexpected data types
+- Analytics produce wrong results due to improper storage
+
+**What User can do with dBCorteK**
+
+- Load sample data in CSV (minimum 50 records)
+- Analyze each column statistically for patterns
+- Suggest optimal SQL data types with confidence scores
+- Generate CREATE TABLE DDL ready for execution
+- Preview table structure before creation
+- Allows exporting DDL for use in production or other SQL workbenches.
+
+**The result:** Better data quality from day one. Reduced ETL failures. Reliable analytics. A data-science-informed schema design process.
+
+### What is the Cortex?
+
+The brain's cortex prepares the body for action - processing sensory information before response. Similarly, dBCorteK ensures reformated data types before actual schema is fully designed and implemented, ensuring your database is prepared for high-quality storage from the start.
+
+---
+
+## Features
+
+### Core Capabilities
+- **CSV Data Loading** - Load sample CSV files with minimum 50 records
+- **Statistical Data Analysis** - Analyze each column for patterns, distributions, and anomalies
+- **Intelligent Type Inference** - 10+ detection rules for common data patterns
+- **Confidence Scoring** - Each suggestion includes confidence percentage
+- **DDL Generation** - Create ready-to-execute CREATE TABLE statements
+- **DDL Export** -  export DDL predefined query for further review such as adding constraints
+
+### Current Type Inference Rules -  Commonly underestimated
+- **Date/Time Detection** - Recognizes different formats including YYYY-MM-DD, MM/DD/YYYY, and datetime patterns
+- **Boolean Detection** - Identifies yes/no, true/false, 1/0, Y/N and other boolean patterns
+- **Phone Number Detection** - Recognizes international phone number formats
+- **BLOB Detection** - Detects file extensions (.pdf, .jpg, .exe, etc.)
+- **Long Text Detection** - Identifies columns with average length > 200 characters
+- **Text-Only Detection** - Recognizes purely alphabetic content
+- **Mixed Content Detection** - Identifies alphanumeric with special characters
+- **Leading Zeros Detection** - Preserves formatting for ZIP codes, IDs
+- **Numeric Detection** - Distinguishes integers from decimals
+
+### Data Management
+- **SQLite Integration** - Built-in database engine for immediate testing
+- **Sample Data Generation** - Create realistic test data preserving original CSV structure
+- **CSV Export** - Export any table to CSV format
+- **DDL Export** - Save generated DDL as .sql files for production use
+- **Data Viewer** - Browse created tables and their data
+
+---
+
+## Sample Outputs
+
+### Type Analysis Interface
+The tool analyzes each column and displays suggested data types with confidence scores:
+
+| Column Name | Suggested Type | Confidence |
+|-------------|---------------|------------|
+| birth_date | DATE | 85% |
+| is_active | BOOLEAN | 90% |
+| phone_number | VARCHAR(20) | 85% |
+| age | INTEGER | 90% |
+| salary | REAL | 85% |
+| description | TEXT | 80% |
+
+### Sample Generated DDL Output - ready for further development
+```sql
+-- Generated by dBCorteK v6.0
+-- Table: employees
+-- Generated: 2025-01-15 14:30:00
+
+CREATE TABLE IF NOT EXISTS employees (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    full_name TEXT,
+    birth_date TEXT /* DATE */,
+    is_active INTEGER /* BOOLEAN */,
+    phone_number TEXT /* VARCHAR(20) */,
+    age INTEGER,
+    salary REAL,
+    description TEXT
+);
+```
+## Installation
+Pre-compiled Installer (Recommended for End Users)
+- Click dBCorteK_Setup.exe and download as a `raw` file
+- Run the installer
+- Follow the installation wizard
+- Launch from Start Menu or Desktop shortcut
+
+## Minimum System Requirements
+
+| Component | Minimum | Recommended |
+|-----------|---------|-------------|
+| OS | Windows 10/11 (64-bit) | |
+| RAM | 4GB | 8GB+ |
+| CPU | Dual-core | Quad-core |
+| Storage | 200MB | 500MB+ |
+
+---
+
+## Keyboard Shortcuts
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+L` | Load CSV File |
+| `Ctrl+G` | Generate Sample Data |
+| `Ctrl+A` | Analyze Data Types |
+| `Ctrl+D` | Generate DDL |
+| `Ctrl+V` | Validate DDL Syntax |
+| `Ctrl+R` | Execute DDL |
+| `Ctrl+E` | Export DDL Script |
+| `Ctrl+X` | Export Table as CSV |
+| `Ctrl+N` | New Database |
+| `Ctrl+O` | Open Database |
+| `Ctrl+Q` | Exit Application |
+| `F5` | Refresh All Views |
+| `F1` | Show Help |
+| `F2` | Show Keyboard Shortcuts |
+| `Ctrl+Tab` | Switch to Next Tab |
+| `Ctrl+Shift+Tab` | Switch to Previous Tab |
+| `↑/↓` | Navigate rows in tables |
+| `←/→` | Scroll horizontally |
+
+---
+
+## Quick Start
+
+### Step 1: Load or Generate Data
+- Click `Load CSV` or press `Ctrl+L` to import your CSV file
+- OR click `Generate Sample Data` or press `Ctrl+G` to create test data
+- The tool expects CSV as a representation of your future database table
+
+### Step 2: Analyze Data
+- Press `Ctrl+A` or click `Analyze Data`
+- Review suggested data types and confidence scores for each column
+- Methodology details appear in the right panel explaining why each type was suggested
+
+### Step 3: Generate and Execute DDL
+- Press `Ctrl+D` or click `Confirm Data Types & Generate DDL`
+- Enter a table name when prompted
+- Review the generated CREATE TABLE statement
+- Press `Ctrl+R` to execute and create the table
+- OR press `Ctrl+E` to export DDL as .sql file for production use
+
+### Step 4: View Results
+- Switch to the Data Viewer tab using `Ctrl+Tab`
+- Select your table from the dropdown
+- Browse table structure and sample data
+
+---
+
+## Confidence Level Determination
+
+Confidence is calculated as a percentage of sample values matching the detected pattern (e.g., 85% for date detection when 85% of values match date formats), combined with additional weighting from header keyword matches and the specificity of the pattern detected.
+
+---
+
+## Use Cases
+
+dBCorteK is designed for anyone who needs to design database schemas with data quality in mind.
+
+### Data Teams
+- Design new databases without guessing data types
+- Ensure consistent data types across tables
+- Reduce downstream ETL failures
+
+### Database Developers Without Data Science Background
+- Get data-type recommendations without statistical expertise
+- Learn proper data type selection through methodology explanations
+- Avoid common pitfalls like storing dates as text or losing leading zeros
+
+### Data Quality Assurance
+- Validate that proposed schemas match actual data
+- Enforce proper data types from the start
+- Prevent quality issues before they occur
+
+
+### Why Choose dBCorteK for These Use Cases?
+
+- **Free** - No licensing fees or subscription costs
+- **Offline** - Works entirely on your Windows desktop
+- **Complete Workflow** - Load, analyze, generate, execute
+- **Transparent** - See why each type was suggested
+- **Lightweight** - Runs on CPU, no GPU needed
+- **No Database Required** - Built-in SQLite for testing
+
+---
+
+## Technical Specifications
+
+### Basic Type Inference Details
+
+| Rule | Detection Method | Output Type |
+|------|-----------------|-------------|
+| Date/Time | Regex patterns + header keywords | DATE, DATETIME |
+| Boolean | Value patterns + header prefixes | BOOLEAN |
+| Phone | Header keywords + country code detection | VARCHAR(n) |
+| BLOB | File extension detection | BLOB |
+| Long Text | Average length > 200 chars | TEXT |
+| Text-Only | >70% alphabetic, no digits | TEXT |
+| Mixed | Letters + digits in >50% of values | VARCHAR(n) |
+| Leading Zeros | >70% of values start with '0' | VARCHAR(n) |
+| Numeric | >80% convertible to numbers | INTEGER or REAL |
+
+### CSV Export Specifications
+
+| Specification | Description |
+|---------------|-------------|
+| Encoding | UTF-8 |
+| Delimiter | Comma (,) |
+| Null Handling | Stored as NULL string |
+| Headers | Preserved from original data |
+
+### DDL Export Specifications
+
+| Specification | Description |
+|---------------|-------------|
+| File Extension | .sql |
+| Encoding | UTF-8 |
+| Comments | Include generation metadata |
+| Methodology | Column inference methods documented |
+
+---
+
+## Reporting Issues
+
+When reporting issues, please include:
+
+- Operating system version
+- CSV file structure (number of columns, rows)
+- Steps to reproduce the issue
+- Expected vs actual behavior
+- Screenshots if applicable
+- Error messages if any
+
+---
+
+## License
+
+Distributed under the MIT License. See `LICENSE` file for more information.
+
+---
+
+## Contact & Support
+
+- **Developer Email**: amosrobert857@gmail.com
+- **GitHub Issues**: Use the Issues tab for bug reports and feature requests
+- **Documentation**: Check the Wiki for detailed guides
+
+---
+
+## Frequently Asked Questions
+
+**Q: What CSV format is supported?**
+A: Standard CSV with headers in the first row. The tool reads the first 100 rows for analysis.
+
+**Q: How many records are needed for sample data?**
+A: Minimum 50 records recommended for reliable statistical analysis.
+
+**Q: What happens if my data has missing values?**
+A: Missing values are handled gracefully - they don't affect type inference.
+
+**Q: Can I edit the DDL before execution?**
+A: Yes, the DDL editor is fully editable. You can modify types, add constraints, or adjust the schema.
+
+**Q: Does the tool modify my original CSV file?**
+A: No, the CSV is only read for analysis. Your original data remains unchanged.
+
+**Q: Can I use this with PostgreSQL or MySQL?**
+A: Export the DDL as .sql and adapt the syntax for your target database. SQLite types map closely to standard SQL.
+
+**Q: How is confidence calculated?**
+A: Confidence is the percentage of sample values matching the detected pattern, weighted by header keyword matches and pattern specificity.
+
+**Q: Why VARCHAR size recommendation?**
+A: The tool calculates the 95th percentile length of your data plus 10% buffer to accommodate future growth.
+
+**Q: Can I load multiple CSV files?**
+A: Currently one CSV at a time. Future versions will support multiple tables and relationships.
+
+---
+
+<div align="center">
+
+Built with ❤️ for the Database Community
+
+[Report Bug](https://github.com/Amos77Robert/dbcortek/issues) · [Request Feature](https://github.com/Amos77Robert/dbcortek/issues)
+
+</div>
