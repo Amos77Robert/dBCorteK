@@ -35,7 +35,7 @@ Database designers often lack Data Science perspective, leading to improper data
 - Load sample data in CSV (minimum 50 records)
 - Analyze each column statistically for patterns
 - Suggest optimal SQL data types with confidence scores
-- Generate CREATE TABLE DDL ready for execution
+- Generate CREATE TABLE DDL ready for execution (currently works on CREATE DDL)
 - Preview table structure before creation
 - Allows exporting DDL for use in production or other SQL workbenches.
 - Has Custom SQL Editor to use for previewing recommended table structure using queries.
@@ -217,6 +217,7 @@ dBCorteK is designed for anyone who needs to design database schemas with data q
 - **Transparent** - See why each type was suggested
 - **Lightweight** - Runs on CPU, no GPU needed
 - **No Database Required** - Built-in SQLite for testing
+- Built-in SQL Editor to test suggested schema structure
 
 ---
 
