@@ -77,6 +77,12 @@ The brain's cortex prepares the body for action - processing sensory information
 - **DDL Export** - Save generated DDL as .sql files for production use
 - **Data Viewer** - Browse created tables and their data
 
+### SQL Query Editor
+``` ──────────────────────────────────────────────────
+• Custom Built SQL Editor to preview suggested table structures 
+• Check validity of the query
+• Execute queries from real database engine
+```
 ---
 
 ## Sample Outputs
@@ -176,13 +182,6 @@ Pre-compiled Installer (Recommended for End Users)
 - Switch to the Data Viewer tab using `Ctrl+Tab`
 - Select your table from the dropdown
 - Browse table structure and sample data
-
-### SQL Query Editor
-``` ──────────────────────────────────────────────────
-• Custom Built SQL Editor to preview suggested table structures 
-• Check validity of the query
-• Execute queries from real database engine
-```
 ---
 
 ## Confidence Level Determination
