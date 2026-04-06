@@ -95,6 +95,9 @@ The brain's cortex prepares the body for action - processing sensory information
 ### Sample table data type structure and data_Data Viwer(DDL) tab
 ![sample3](samples/sample3.png)
 
+### Custom SQL Editor Incorporated with Syntax Validity Check ( SQL Playground tab is already renamed to SQL Editor in the installer)
+![sample4](samples/sample4.png)
+
 ### Results after query execution from basic SQL Editor
 ![sample5](samples/sample5.png)
 
