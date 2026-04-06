@@ -95,9 +95,6 @@ The brain's cortex prepares the body for action - processing sensory information
 ### Sample table data type structure and data_Data Viwer(DDL) tab
 ![sample3](samples/sample3.png)
 
-### Basic SQL Query Editor Incorporated to Enhance Schema Testing
-![sample4](samples/sample4.png) 
-
 ### Results after query execution from basic SQL Editor
 ![sample5](samples/sample5.png)
 
