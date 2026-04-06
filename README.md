@@ -84,7 +84,22 @@ The brain's cortex prepares the body for action - processing sensory information
 ```
 ---
 
-## Sample Outputs
+## 📸 Samples
+
+### Showing the suggested data types and inference details when sample data is loaded
+![sample1](samples/ssmple1.png)
+
+### Showing generated table schema details
+![sample2](samples/sample2.png)
+
+### Sample table data type structure and data_Data Viwer(DDL) tab
+![sample3](samples/sample3.png)
+
+### Basic SQL Query Editor Incorporated to Enhance Schema Testing
+![sample4](samples/sample4.png)
+
+### Results after query execution from basic SQL Editor
+![sample5](samples/sample5.png)
 
 ### Type Analysis Interface
 The tool analyzes each column and displays suggested data types with confidence scores:
