@@ -87,7 +87,7 @@ The brain's cortex prepares the body for action - processing sensory information
 ## 📸 Samples
 
 ### Showing the suggested data types and inference details when sample data is loaded
-![sample1](samples/ssmple1.png)
+![sample1](samples/sample1.png)
 
 ### Showing generated table schema details
 ![sample2](samples/sample2.png)
